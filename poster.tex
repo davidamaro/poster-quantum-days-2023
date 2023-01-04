@@ -121,15 +121,21 @@
 \begin{tcbposter}[
 coverage = {spread, interior style={top color=cyan,bottom color=cyan!50!red} },
 poster = {columns=3,rows=2},
-boxes = {fonttitle = \bfseries\Large\scshape},
+boxes = {fonttitle = \bfseries\Large\scshape, sharp corners = downhill, arc=3mm, boxrule = 1mm},
 fontsize = 16pt
 ]
-\posterbox[adjusted title = Summary, colframe = teal!50!black, colback=teal!50]{
+\posterbox[adjusted title = Summary, colframe = teal!50!black, colback=teal!50, valign = center]{
     column = 1,
     name=project, 
     between=top and bottom
 }{
 {\Huge We characterise a set of generators of universal qutrit gates, via the \textbf{average gate fidelity}.}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{auxiliary figures/matrices.pdf}
+\end{center}
+}
+\posterbox{name=title,column=1,above=bottom}{
+    \underline{David Amaro-Alcala}, Barry C. Sanders, Hubert de Guise
 }
 
 \posterbox[adjusted title = Background]{
@@ -179,10 +185,10 @@ implementation. Our formalism is valid under state preparation and
 measurement imperfections and for gate-dependent errors. These two
 conditions make our method part of the state-of-the-art in Randomised
 Benchmarking schemes.
-\begin{center}
-\includegraphics[width=0.8\textwidth]{auxiliary figures/spplotandagf.pdf}
-\end{center}
 \end{minipage}
+\begin{center}
+\includegraphics[width=\textwidth]{auxiliary figures/spplotandagf.pdf}
+\end{center}
 }
 \end{tcbposter}
 \end{document}
