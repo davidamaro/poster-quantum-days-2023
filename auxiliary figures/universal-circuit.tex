@@ -1,0 +1,81 @@
+\documentclass{standalone}
+% \documentclass{article}
+% \documentclass{beamer}
+% \usetheme{Pittsburgh}
+% \usetheme{Rochester}
+% \usecolortheme{spruce}
+
+% \usepackage{mathtools}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{braket}
+\usepackage{tikz}
+% \usepackage[tikz]{bclogo} 
+\usepackage[tikz]{bclogo} 
+\usepackage{braket}
+\usetikzlibrary{quantikz}
+\begin{document}
+% \begin{quantikz}
+% \lstick{\ket{0}} & \phase{\alpha} & \gate{H}
+% & \phase{\beta} & \gate{H} & \phase{\gamma}
+% & \rstick{Arbitrary\\pure state}\qw
+% \end{quantikz}
+% \begin{quantikz}
+% \ket0 & \gate{g_1}
+% & \gate{\cdots}
+% & \gate{g_m}
+% & \gate{(g_1\circ \cdots \circ g_m)^{-1}}
+% & \gate{\bra0}\qw
+% \end{quantikz}
+%\begin{quantikz}[slice all]
+% \lstick{\(\ket{x_0}\)} & \gate{H} & \ctrl{1} & \ctrl{2} & \qw      & \qw        & \qw     & \qw      & \rstick{\(\ket0 + e^{2\pi i x/2}\ket1\)} \\
+% \lstick{\(\ket{x_1}\)} & \qw   & \control{}  & \qw      & \gate{H} & \ctrl{1}   & \qw  & \qw     & \rstick{\(\ket0 +e^{2\pi i x/4} \ket1\)} \\
+% \lstick{\(\ket{x_2}\)} & \qw   & \qw      &  \control{} &  \qw     & \control{} & \gate{H} & \qw & \rstick{\(\ket0 +e^{2\pi i x/8} \ket1\)} 
+%\lstick{\(\ket\psi\)} & \ctrl1  & \ctrl2 &\gate[wires=3]{E} & \ctrl1 &\ctrl2 &\targ{}&\qw\rstick{\(\ket\psi\)}\\
+%\lstick{\(\ket0\)}     & \targ{} & \qw    &  &\targ{}&\qw &\ctrl{-1} &\qw\\
+%\lstick{\(\ket0\)}     & \qw     & \targ{} & & \qw & \targ{} & \ctrl{-2}&\qw
+%\end{quantikz}
+
+\begin{quantikz}[]
+    % \lstick{\(\ket{x_0}\)} & \gate{H} & \ctrl{1} & \ctrl{2} & \qw      & \qw        & \qw     & \qw      & \rstick{\(\ket0 + e^{2\pi i x/2}\ket1\)} \\
+    % \lstick{\(\ket{x_1}\)} & \qw   & \control{}  & \qw      & \gate{H} & \ctrl{1}   & \qw  & \qw     & \rstick{\(\ket0 +e^{2\pi i x/4} \ket1\)} \\
+    % \lstick{\(\ket{x_2}\)} & \qw   & \qw      &  \control{} &  \qw     & \control{} & \gate{H} & \qw & \rstick{\(\ket0 +e^{2\pi i x/8} \ket1\)} 
+    \lstick{\(\ket\psi\)} & \ctrl1  & \gate{H} &  \qw  \\
+    \lstick{\(\ket0\)}    & \targ{} & \qw      & \gate{T}              
+\end{quantikz}
+
+% \begin{quantikz}
+% \lstick{$\ket{0}$} & \gate{H} & \ctrl{1} & \gate{U}   & \ctrl{1}   & \swap{2} & \ctrl{1} & \qw \\
+% \lstick{$\ket{0}$} & \gate{H} & \targ{}  & \octrl{-1} & \control{} & \qw      & \octrl{1} & \qw \\
+%                    &          &          &            &            &\targX{}  & \gate{U} & \qw
+% \end{quantikz}
+% \begin{frame}
+%     \frametitle{Basics: the method}
+%     \begin{itemize}
+%         \item Define a ``mapping'' between group elements \(g\)
+%         and gates \(\boxed{g}\).
+%     \item Randomly sample \(m\) group members \(g_1,\dots, g_m\).
+%     \item Randomised Benchmarking run.
+%     \begin{quantikz}
+%         \ket0
+%         % \lstick{\(\ket0\)}% & \gate{g_1}
+%         % \lstick{\(\ket0\)}% & \gate{g_1}
+%         % & \gate{\cdots}
+%         % & \gate{g_m}
+%         % & \gate{(g_1\circ \cdots \circ g_m)^{-1}}
+%         % & \gate{\bra0}\qw
+%         % & \rstick{Arbitrary\\pure state}\qw
+%         \end{quantikz}
+%     \item For a mathematical description of the group element \(g_i\), 
+%     I will use \(G(g_i)\). \(G\) is a \textbf{map} between a group and a list of gates.
+%     \item Thus, the \emph{analytical value} for the circuit is 
+%     \begin{equation}
+%         \bra0 (G((g_1 \cdots g_m)^{-1})) \circ G(g_m)\circ\cdots\circ G(g_2)\circ G(g_1)(\ket0)
+%     \end{equation}
+%     \end{itemize}
+
+    
+
+% \end{frame}
+
+\end{document}
