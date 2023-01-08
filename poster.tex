@@ -51,20 +51,6 @@ interested in the application of Representation Theory in Quantum Information.
 % \posterbox{name=authors,column=1,above=project}{
 % \posterbox{name=authors,column=1,below=project}{
 % \posterbox{name=authors,column=1,between=project and bottom}{
-\posterbox{name=authors,column=1,above=bottom}{
-    \underline{David Amaro-Alcala}\({}^{1,2}\), Barry C. Sanders\({}^{1}\), Hubert de Guise\({}^{1,2}\).
-    % DAA is supported by the Government of Alberta and NSERC.
-
-    % \includegraphics[width=0.3\textwidth]{auxiliary figures/img-logo2-en.png}
-    % \includegraphics[width=0.3\textwidth]{auxiliary figures/cpe-government-of-alberta-logo.jpg}
-    \begin{centering}
-    \({}^1\)\includegraphics[height=13mm]{auxiliary figures/UC-horz-rgb.png}
-    % \includegraphics[height=13mm]{auxiliary figures/shield-alone.png}
-    \({}^2\)\includegraphics[height=13mm]{auxiliary figures/lu_logo.png}
-    % \includegraphics[height=13mm]{auxiliary figures/img-logo2-en.png}
-    % \includegraphics[height=13mm]{auxiliary figures/cpe-government-of-alberta-logo.png}
-    \end{centering}
-}
 
 
 
@@ -114,7 +100,7 @@ is widely available in different quantum information implementations \myref{ghpt
     % column = 2,row =2,span = 2
     column = 2,span = 2,below  = background
 }{
-\begin{minipage}{0.45\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 
 
@@ -136,7 +122,7 @@ and \(r_+\), respectively.
 \end{center}
 \end{minipage}
 \hspace{0.02\textwidth}
-\begin{minipage}{0.45\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 The name HyperDihedral is given because it is a
 generalisation of the Dihedral group.
 % \begin{table}[]
@@ -170,10 +156,10 @@ RB schemes \myref{ghptsj}.
     name=referencesAndAcknowledgements, 
     % column = 2,row =2,span = 2
     % column = 2,span = 2,below  = result
-    column = 2,span = 2,above  = bottom
+    column = 1,span = 3,above  = bottom
 }{
-\begin{minipage}{0.7\linewidth}
-    {\tiny
+\begin{minipage}{0.8\linewidth}
+    {%\tiny
 [brjj] Carignan-Dugas, Phys. Rev. A., 2015.
 [jrwr] Merkel, Quantum, 2021.
 [gj8dt4] Morvan, Phys. Rev. Lett., 2021.
@@ -181,10 +167,27 @@ RB schemes \myref{ghptsj}.
 [ghptsj] Wang, Front. Phys., 2020.
 }
 \end{minipage}
-\begin{minipage}{0.30\linewidth}
+\begin{minipage}{0.20\linewidth}
     \includegraphics[height=13mm]{auxiliary figures/img-logo2-en.png}
     \includegraphics[height=13mm]{auxiliary figures/cpe-government-of-alberta-logo.png}
 \end{minipage}
+}
+
+% \posterbox{name=authors,column=1,above=referencesAndAcknowledgements}{
+% \posterbox{name=authors,column=1,between=referencesAndAcknowledgements and project}{
+\posterbox[valign=center]{name=authors,column=1,between=project and referencesAndAcknowledgements}{
+    \underline{David Amaro-Alcala}\({}^{1,2}\), Barry C. Sanders\({}^{1}\), Hubert de Guise\({}^{1,2}\).
+    % DAA is supported by the Government of Alberta and NSERC.
+
+    % \includegraphics[width=0.3\textwidth]{auxiliary figures/img-logo2-en.png}
+    % \includegraphics[width=0.3\textwidth]{auxiliary figures/cpe-government-of-alberta-logo.jpg}
+    \begin{centering}
+    \({}^1\)\includegraphics[height=13mm]{auxiliary figures/UC-horz-rgb.png}
+    % \includegraphics[height=13mm]{auxiliary figures/shield-alone.png}
+    \({}^2\)\includegraphics[height=13mm]{auxiliary figures/lu_logo.png}
+    % \includegraphics[height=13mm]{auxiliary figures/img-logo2-en.png}
+    % \includegraphics[height=13mm]{auxiliary figures/cpe-government-of-alberta-logo.png}
+    \end{centering}
 }
 \end{tcbposter}
 \end{document}
