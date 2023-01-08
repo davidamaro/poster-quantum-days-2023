@@ -9,6 +9,19 @@
 \usepackage{braket}
 \usepackage{mdframed}
 \usepackage{caption}
+\usepackage{xcolor}% and then
+% \definecolor{rojito}{RGB}{128,0,0}
+% \definecolor{rojito}{HTML}{a31621}
+% \definecolor{yellowgreen}{HTML}{84c318}
+\definecolor{yellowgreen}{HTML}{52b788}
+\definecolor{palecerulean}{HTML}{90c2e7}
+% \definecolor{tealblue}{HTML}{4e8098}
+% \definecolor{tealblue}{HTML}{d17a22}
+% \definecolor{tealblue}{HTML}{656256}
+% \definecolor{tealblue}{HTML}{f6bd60}
+% \definecolor{fondo}{HTML}{f28482}
+\definecolor{tealblue}{HTML}{f28482}
+\definecolor{fondo}{HTML}{f6bd60}
 % \pagestyle{empty}
 % \pagecolor{red}
 % \newcommand{\myref}[1] { This is the Wikibook about LaTeX supported by #1}
@@ -17,12 +30,13 @@
 \begin{document}
 
 \begin{tcbposter}[
-coverage = {spread, interior style={top color=cyan,bottom color=cyan!50!red} },
+% coverage = {spread, interior style={top color=cyan,bottom color=cyan!50!red} },
+coverage = {spread, interior style={top color=fondo,bottom color=fondo!50!red} },
 poster = {columns=3,rows=2},
 boxes = {fonttitle = \bfseries\Large\scshape, sharp corners = downhill, arc=3mm, boxrule = 1mm},
 fontsize = 16pt
 ]
-\posterbox[adjusted title = Randomised Benchmarking of universal qutrit gates, colframe = teal!50!black, colback=teal!50,valign=center]{
+\posterbox[adjusted title = Randomised Benchmarking of universal qutrit gates, colframe = yellowgreen!50!black, colback=yellowgreen!50,valign=center]{
     column = 1,
     name=project%, 
     % between=top and authors
@@ -55,7 +69,9 @@ interested in the application of Representation Theory in Quantum Information.
 
 
 
-\posterbox[adjusted title = Background, valign = center]{
+\posterbox[adjusted title = Background, valign = center
+, colframe = tealblue!50!black, colback=tealblue!50
+]{
     name=background, 
     % column = 2,row =1 this makes only one small block
     % column = 2,row =1,span = 2
@@ -94,7 +110,9 @@ is widely available in different quantum information implementations \myref{ghpt
 
 
 
-\posterbox[adjusted title = Results,valign = center]{
+\posterbox[adjusted title = Results,valign = center
+, colframe = palecerulean!50!black, colback=palecerulean!50
+]{
 % \posterbox[adjusted title = Results]{
     name=result, 
     % column = 2,row =2,span = 2
@@ -135,7 +153,7 @@ RB schemes \myref{ghptsj}.
 \begin{minipage}{0.45\linewidth}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{auxiliary figures/simulation.pdf}
-\captionof{figure}{\small
+\captionof{figure}{%\small
 Survival probability curve illustrating the relationship between the parameters
 that can be extracted from it to estimate the average gate fidelity shown in the
 second column.
