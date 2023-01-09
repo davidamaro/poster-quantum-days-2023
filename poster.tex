@@ -9,6 +9,13 @@
 \usepackage{braket}
 \usepackage{mdframed}
 \usepackage{caption}
+\usepackage[inline]{enumitem}
+
+%fonts
+% \usepackage{avant}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{xcolor}% and then
 % \definecolor{rojito}{RGB}{128,0,0}
 % \definecolor{rojito}{HTML}{a31621}
@@ -25,7 +32,8 @@
 % \pagestyle{empty}
 % \pagecolor{red}
 % \newcommand{\myref}[1] { This is the Wikibook about LaTeX supported by #1}
-\newcommand{\myref}[1] {[{\color{gray}doi.org/}#1]}
+% \newcommand{\myref}[1] {[{\color{gray}doi.org/}#1]}
+\newcommand{\myref}[1] {[#1]}
 
 \begin{document}
 
@@ -52,11 +60,11 @@ We introduce a \textbf{ scheme to characterise a qutrit T gate}.
 
 Our scheme is
 % a \textbf{ feasible} extension to qutrits of the Dihedral Benchmarking scheme doi.org/brjj.
-a \textbf{ feasible} extension to qutrits of the Dihedral Benchmarking scheme \myref{brjj}.
-Our scheme is the synthesis of the \textbf{ Fourier method} \myref{jrwr} applied to non-Clifford gates.
+a \textbf{ feasible} extension to qutrits of the Dihedral Benchmarking scheme \myref{Carignan-Dugas \emph{et.~al.}}.
+Our scheme is the synthesis of the \textbf{ Fourier method} \myref{Merkel \emph{et.~al.}} applied to non-Clifford gates.
 
 
-Our scheme is important for experimental groups with qutrit implementations \myref{gj8dt4}, 
+Our scheme is important for experimental groups with qutrit implementations \myref{Morvan \emph{et.~al.}}, 
 theorists working on Randomised Benchmarking methods, and in general theorists 
 interested in the application of Representation Theory in Quantum Information.
 }
@@ -85,7 +93,7 @@ interested in the application of Representation Theory in Quantum Information.
 
 
 Randomized Benchmarking (RB) estimates quantum gate quality by comparing the behaviour
-of ideal and noisy gates, via the average gate fidelity $F$ \myref{tfz}.
+of ideal and noisy gates, via the \textbf{average gate fidelity} $F$ \myref{Magesan \emph{et.~al.}}.
 \includegraphics[width=\textwidth]{auxiliary figures/crazy-scientist.pdf}
 \end{minipage}
 \hspace{0.02\textwidth}
@@ -104,7 +112,7 @@ of the RB scheme for their characterization.
 
 
 A \textbf{qutrit} is a three-level quantum system that offers advantages over qubits and
-is widely available in different quantum information implementations \myref{ghptsj}.
+is widely available in different quantum information implementations \myref{Wang \emph{et.~al.}}.
 \end{minipage}
 }
 
@@ -139,7 +147,7 @@ $C_2 \ltimes C_8$ & $ C_3 \ltimes C_9 \times C_9$
 \par
 We obtained the expression for the average gate fidelity 
 for the HyperDihedral group;
-it has two parameters, accessible by using two different initial states.
+it has \textbf{two parameters}, accessible by using two different \textbf{initial states}.
 Our expression 
 \begin{equation*}
     \textstyle F = \frac{3}{4}(1+2r_0 + 6 r_+) + \frac{1}{4}.
@@ -147,14 +155,14 @@ Our expression
 is valid for state imperfections and gate-dependent errors.
 \par
 Our method is feasible because it requires the same resources in already established 
-RB schemes \myref{ghptsj}.
+RB schemes \myref{Wang \emph{et.~al.}}.
 \end{minipage}
 \hspace{0.02\textwidth}
 \begin{minipage}{0.45\linewidth}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{auxiliary figures/simulation.pdf}
 \captionof{figure}{%\small
-Survival probability curve illustrating the relationship between the parameters
+Survival probability \(P\) \emph{vs} circuit depth \(m\) curve illustrating the relationship between the parameters
 that can be extracted from it to estimate the average gate fidelity shown in the
 second column.
 Density matrices \(\ket{0}\bra{0}\)
@@ -175,23 +183,32 @@ and \(r_+\), respectively.
 }{
 \begin{minipage}{0.8\linewidth}
     {%\tiny
-[brjj] Carignan-Dugas, Phys. Rev. A., 2015.
-[jrwr] Merkel, Quantum, 2021.
-[gj8dt4] Morvan, Phys. Rev. Lett., 2021.
-[tfz] Magesan, Phys. Rev. A., 2012.
-[ghptsj] Wang, Front. Phys., 2020.
+    \textbf{References}
+% [brjj] Carignan-Dugas, Phys. Rev. A., 2015.
+% [jrwr] Merkel, Quantum, 2021.
+% [gj8dt4] Morvan, Phys. Rev. Lett., 2021.
+% [tfz] Magesan, Phys. Rev. A., 2012.
+% [ghptsj] Wang, Front. Phys., 2020.
+\begin{enumerate*}
+\item Carignan-Dugas, Phys. Rev. A., 2015.
+\item Merkel, Quantum, 2021.
+\item Morvan, Phys. Rev. Lett., 2021.
+\item Magesan, Phys. Rev. A., 2012.
+\item Wang, Front. Phys., 2020.
+\end{enumerate*}
 }
 \end{minipage}
 \begin{minipage}{0.20\linewidth}
-    \includegraphics[height=13mm]{auxiliary figures/img-logo2-en.png}
     \includegraphics[height=13mm]{auxiliary figures/cpe-government-of-alberta-logo.png}
+    \includegraphics[height=13mm]{auxiliary figures/img-logo2-en.png}
 \end{minipage}
 }
 
 % \posterbox{name=authors,column=1,above=referencesAndAcknowledgements}{
 % \posterbox{name=authors,column=1,between=referencesAndAcknowledgements and project}{
 \posterbox[valign=center]{name=authors,column=1,between=project and referencesAndAcknowledgements}{
-    \underline{David Amaro-Alcala}\({}^{1,2}\), Barry C. Sanders\({}^{1}\), Hubert de Guise\({}^{1,2}\).
+    \underline{David Amaro-Alcal\'a}\({}^{1,2}\), Barry C. Sanders\({}^{1}\), Hubert de Guise\({}^{1,2}\).
+    \vspace*{3mm}
     % DAA is supported by the Government of Alberta and NSERC.
 
     % \includegraphics[width=0.3\textwidth]{auxiliary figures/img-logo2-en.png}
